@@ -2,35 +2,43 @@
 <html>
 <head>
 <title>Page Title</title>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 1px solid #000000;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr {
+        background-color: #ffffff;
+    }
+
+    /* 첫 번째 tr(헤더) 스타일 */
+    tr:first-child {
+        background-color: black;
+    }
+    
+    /* 첫 번째 tr에 있는 th 요소 스타일 */
+    tr:first-child th {
+        color: white;
+    }
+</style>
 </head>
 <body>
 
-
-    <style>
-        table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        td, th {
-          border: 1px solid #000000;
-          text-align: left;
-          padding: 8px;
-        }
-        
-        tr{
-          background-color: #ffffff;
-        }
-        t
-    </style>
-<h2>피시방 점유율 순위(2025년 2월기준)</h2>
+<h2>피시방 점유율 순위(2025년 2월 기준)</h2>
 
 <table>
   <tr>
-    <td style="color:rgb(0, 0, 0);">게임명</td>
-    <td style="color:rgb(0, 0, 0);">장르/개발사</td>
-    <td style="color:rgb(0, 0, 0);">점유율</td>
+    <th>게임명</th>
+    <th>장르/개발사</th>
+    <th>점유율</th>
   </tr>
   <tr>
     <td>리그 오브 레전드</td>
@@ -39,7 +47,7 @@
   </tr>
   <tr>
     <td>FC 온라인</td>
-    <td>스포츠 / 넥슨슨</td>
+    <td>스포츠 / 넥슨</td>
     <td>13.29%</td>
   </tr>
   <tr>
@@ -48,22 +56,32 @@
     <td>7.13%</td>
   </tr>
   <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
+    <td>배틀그라운드</td>
+    <td>FPS / 카카오 / 스팀</td>
+    <td>6.84%</td>
   </tr>
   <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
+    <td>서든어택</td>
+    <td>FPS / 넥슨</td>
+    <td>5.26%</td>
   </tr>
   <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
+    <td>메이플스토리</td>
+    <td>RPG / 넥슨</td>
+    <td>4.74%</td>
   </tr>
+  <tr>
+    <td>오버워치2</td>
+    <td>FPS / 블리자드</td>
+    <td>3.68%</td>
+  </tr>
+  <tr>
+    <td>로스트아크</td>
+    <td>RPG / 스마일게이트</td>
+    <td>3.28%</td>
+  </tr>
+
 </table>
+
 </body>
 </html>
-
-
