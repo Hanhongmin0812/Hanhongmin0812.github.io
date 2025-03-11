@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>  Two Equal Columns</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#ffffff;">
+    <h2>Modern people's fatigue, where does it come from?</h2>
+    <p>We are tired every day. We feel tired as soon as we wake up in the morning, and exhale an exhausted sigh on our way to work. We try to hold ourselves together over a cup of coffee, but in the afternoon, helplessness comes again. So where does this fatigue come from? It may be because of physical overwork. But fatigue in modern people goes beyond mere physical exhaustion. Mental stress, constant information overload, and a schedule full of 'tasks' make us more exhausted. We are constantly connected, required to respond immediately, and consider multitasking a virtue. But the result is rather reduced concentration and emotional exhaustion. What can we do to get out of this fatigue? A simple rest may not be the answer. Real recovery comes from rest. It is important to consciously keep away from digital devices, reduce meaningless consumption, and take time to talk to yourself. It is also important to allow yourself time to do nothing sometimes. We need to break away from the obsession to be more efficient and more productive. The best way to reduce fatigue is to choose a less tired life. That choice, in the end, will lead us to a better life.</p>
+  </div>
+  <div class="column" style="background-color:#ffffff;">
+    <h2>In the digital age, are we really connecting?</h2>
+    <p>It is an era in which you can instantly connect to anyone in the world with just a smartphone. Through SNS, you can check your friends' daily lives in real time and talk to people thousands of kilometers away with just one message. However, if you look around us, you are familiar with the scene where each of us focuses on our cell phone screens and does not look at each other, whether in cafes or subways. Are we really connected?
+
+        Digital technology has narrowed the physical distance, but it has made the emotional distance rather distant. They believe that they maintain relationships by clicking "like" on social media, but actual conversations are decreasing. Even if you meet friends, you spend less time making eye contact while checking your phone. How many people do you have hundreds of followers online, but can you really share your concerns with?
+        
+        The essence of connection lies in true communication, not just contact. As technology advances, there are areas where we need to work more consciously. Sometimes, let's put down our smartphone, make eye contact, and listen carefully to the other person's story. The deepest connection still exists at the moment people face each other.</p>
+  </div>
+</div>
+
+</body>
+</html>
