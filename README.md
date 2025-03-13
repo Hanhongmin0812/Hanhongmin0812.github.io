@@ -4,4 +4,3 @@
 [**homework2-3**](https://Hanhongmin0812.github.io/homework2-3.html) <br>
 [**homework2-4**](https://Hanhongmin0812.github.io/homework2-4.html)
 
-<img src="coconut.jpg" alt="Trulli" width="500" height="333">
