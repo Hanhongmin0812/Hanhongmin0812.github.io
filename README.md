@@ -1,5 +1,4 @@
 # Hanhongmin0812.github.io
-Hanhongmin0812.github.io
 20240835 한홍민 <br>
 [**homework2-1**](https://Hanhongmin0812.github.io/homework2-1.html) <br>
 [**homework2-2**](https://Hanhongmin0812.github.io/homework2-2.html) <br>
