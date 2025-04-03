@@ -6,12 +6,16 @@
 $n = $_GET["userinput"];
 $sum = 0;
 $prod = 1;
-for ($x = 1; $x < $n+1; $x++) {
+for ($x = 1; $x < $n; $x++) {
+    echo("$x + ");
   $sum = $x + $sum;
+}
+echo "$n = $sum<br>";
+for ($x = 1; $x < $n; $x++) {
+    echo("$x * ");
   $prod = $prod * $x;
 }
-echo "1부터 30까지의 합은 = $sum<br>";
-echo "1부터 30까지의 곱은 = $prod";
+echo "$x = $prod";
 ?>
 
 </body>
