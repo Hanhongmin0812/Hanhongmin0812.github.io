@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$n = 30;
+$n = $_GET("userinput");
 for ($x = 0; $x < $n; $x++) {
   $data[$x] = rand(10, 100);
 }
