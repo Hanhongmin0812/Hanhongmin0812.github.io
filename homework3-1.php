@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$n = $_GET["userinput"];
+$n = 30;
 $sum = 0;
 $prod = 1;
 for ($x = 1; $x < $n; $x++) {
