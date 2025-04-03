@@ -2,8 +2,8 @@
 <html>
 <body>
 
-<?php  
-$n = 100;
+<?php
+$n =$_GET["userinput"];
 $p1 = 0;
 $p2 = 1;
 for ($x = 1; $x < $n; $x++) {
@@ -14,6 +14,9 @@ for ($x = 1; $x < $n; $x++) {
     echo "$x $p1 $p<br>\n";
 }
 ?>
+
+</body>
+</html>
 
 </body>
 </html>
