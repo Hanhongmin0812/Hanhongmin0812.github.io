@@ -1,25 +1,9 @@
-<?php
-$n = $_GET("userinput");
-$sum = 0;
-$prod = 1;
-for ($x = 1; $x < $n; $x++) {
-    echo("$x + ");
-  $sum = $x + $sum;
-}
-echo "$n = $sum<br>";
-for ($x = 1; $x < $n; $x++) {
-    echo("$x * ");
-  $prod = $prod * $x;
-}
-echo "$x = $prod";
-?>
-
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"></head>
 <body>
  
-<form method="GET" action="homework3-1.html">
+<form method="GET" action="homework3-1.php">
 자연수 n 입력 : <input type="text" name="userinput"><br>
 <input type="submit" value="submit">
 </form>
