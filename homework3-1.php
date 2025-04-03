@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$n = $_GET["userinput"];
+$n = $_POST["userinput"];
 $sum = 0;
 $prod = 1;
 for ($x = 1; $x < $n+1; $x++) {
