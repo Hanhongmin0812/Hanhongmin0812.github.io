@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$n = $_GET("userinput");
+$n = intval($_GET["userinput"]);
 for ($x = 0; $x < $n; $x++) {
   $data[$x] = rand(10, 100);
 }
