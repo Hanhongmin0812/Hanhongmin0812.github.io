@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$n =$_GET["userinput"];
+$n = intval($_GET["userinput"]);
 $p1 = 0;
 $p2 = 1;
 for ($x = 1; $x < $n+1; $x++) {
