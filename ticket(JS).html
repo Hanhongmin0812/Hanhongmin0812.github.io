@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>티켓 예매 JS버전</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            font-size: 12px;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 80px;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        input[type="button"] {
+            margin-left: 260px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .price-select-wrapper span.price {
+            padding: 0 8px;
+            border-right: 1px solid #000;
+            user-select: none;
+        }
+
+        .price-select-wrapper select {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<form id="ticketForm" onsubmit="return false;">
+    고객성명 <input type="text" id="customerName" required>
+    <input type="button" value="합계" onclick="calculateTotal()">
+    <br><br>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>구분</th>
+            <th>어린이</th>
+            <th>어른</th>
+            <th>비고</th>
+        </tr>
+        <tbody id="ticketTableBody"></tbody>
+    </table>
+</form>
+
+<div class="result" id="resultBox"></div>
+
+<script>
+const prices = {
+    "입장권": { child: 7000, adult: 10000 },
+    "BIG3": { child: 12000, adult: 18000 },
+    "자유이용권": { child: 21000, adult: 28000 },
+    "연간이용권": { child: 70000, adult: 90000 }
+};
+
+const memoText = {
+    "입장권": "입장",
+    "BIG3": "입장+이용3종",
+    "자유이용권": "입장+이용자유",
+    "연간이용권": "입장+이용자유"
+};
+
+window.onload = () => {
+    const tbody = document.getElementById('ticketTableBody');
+    let index = 1;
+    for (let type in prices) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${index}</td>
+            <td>${type}</td>
+            <td>
+                <div class='price-select-wrapper'>
+                    <span class='price'>${prices[type].child}</span>
+                    <select name="${type}_child">
+                        ${[...Array(11).keys()].map(i => `<option value="${i}">${i}</option>`).join('')}
+                    </select>
+                </div>
+            </td>
+            <td>
+                <div class='price-select-wrapper'>
+                    <span class='price'>${prices[type].adult}</span>
+                    <select name="${type}_adult">
+                        ${[...Array(11).keys()].map(i => `<option value="${i}">${i}</option>`).join('')}
+                    </select>
+                </div>
+            </td>
+            <td>${memoText[type]}</td>
+        `;
+        tbody.appendChild(tr);
+        index++;
+    }
+};
+
+function calculateTotal() {
+    const form = document.forms['ticketForm'];
+    const name = document.getElementById('customerName').value.trim();
+    if (!name) return alert("고객 성명을 입력하세요.");
+
+    let total = 0;
+    let output = [];
+
+    for (let type in prices) {
+        const childQty = parseInt(form[`${type}_child`].value);
+        const adultQty = parseInt(form[`${type}_adult`].value);
+
+        if (childQty > 0)
+            output.push(`어린이 ${type} ${childQty}매`);
+        if (adultQty > 0)
+            output.push(`어른 ${type} ${adultQty}매`);
+
+        total += (childQty * prices[type].child) + (adultQty * prices[type].adult);
+    }
+
+    const now = new Date();
+    const timeString = now.toLocaleString("ko-KR", { hour12: true });
+
+    document.getElementById('resultBox').innerHTML = `
+        <br>${timeString}<br>
+        ${name} 고객님 감사합니다.<br>
+        ${output.join("<br>")}<br>
+        합계 ${total.toLocaleString()}원입니다.
+    `;
+}
+</script>
+</body>
+</html>
